@@ -55,7 +55,7 @@ function discordBot()
      {
        // Get query
        var yt_query = lc_msg.substr(0).slice(4, lc_msg.length);
-       message.challen.send('query = ' + yt_query);
+       message.channel.send('query = ' + yt_query);
        // Get first video
        var request = require("request");
        var yt_url = 'https://www.youtube.com/results?search_query=' + yt_query;
