@@ -66,7 +66,7 @@ function discordBot()
         {
             message.channel.send('```!help            - what you\'re seeing now.\n' +
                                     '!yt [query]      - searches youtube for your query.\n' +
-            ```');
+            '```');
         }
 
         /* Youtube search */
