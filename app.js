@@ -93,7 +93,6 @@ function discordBot()
             var selected_video = '';
             // print video
         }
-    }
 
     /* Ok commands list is done.  Radio stuff from here. */
 
