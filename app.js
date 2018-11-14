@@ -55,29 +55,14 @@ function discordBot()
      {
        // Get query
        var yt_query = lc_msg.substr(0).slice(4, lc_msg.length);
-       message.channel.send('query = ' + yt_query);
        // Get first video
        var request = require("request");
        var yt_url = 'https://www.youtube.com/results?search_query=' + yt_query;
        request({uri: yt_url},
          function(error, response, body){
-           // Get the first instance of `{"videoId":"`
-           //might save the body to a tmp file and test it like that.
            var start = body.substring(body.indexOf('/watch?v=') + 1);
            message.channel.send('https://youtube.com/' + start.substring(0, 19));
-           console.log('youtube.com/' + start.substring(0, 19));
          });
-
-            
-            
-            
-            
-            
-       // get HTML
-       // parse via pattern. >> '/<a href="\/watch\?v=(.*?)"/i'
-       // return 1st video
-       var selected_video = '';
-       // print video
      }
 
   });
