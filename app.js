@@ -64,8 +64,8 @@ function discordBot()
            // Get the first instance of `{"videoId":"`
            //might save the body to a tmp file and test it like that.
            var start = body.substring(body.indexOf('/watch?v=') + 1);
-           console.log(start.substring(0,11));
-           console.log('youtube.com/watch?v=' + body.substr(start, 11));
+           message.channel.send('https://youtube.com/' + start.substring(0, 19));
+           console.log('youtube.com/' + start.substring(0, 19));
          });
 
             
