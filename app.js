@@ -69,7 +69,7 @@ function discordBot()
            {
                var start = buf.search('<a aria-hidden="true" href="/watch?v="');
                console.log(start);
-           }
+           });
            
 //           var start = body.search('<a aria-hidden="true" href="/watch?v="');
 //           console.log(start);
