@@ -1,6 +1,9 @@
 'use strict';
 /* desushoujo alert bot */
 
+// Stupid have to add this since my node version is dumb.
+String.prototype.startsWith = function(str){ return this.indexOf(str) == 0; }
+
 
 /* For listening... */
 var http = require("http");
