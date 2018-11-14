@@ -79,6 +79,7 @@ function discordBot()
 //           console.log(body.substr(start,));
 //           console.log('youtube.com/watch?v=' + body.substr(start, 11));
          });
+*/
             
             
             
