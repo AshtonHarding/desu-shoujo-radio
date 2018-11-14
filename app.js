@@ -2,8 +2,11 @@
 /* desushoujo alert bot */
 
 // Stupid have to add this since my node version is dumb.
-String.prototype.startsWith = function(str){ return this.indexOf(str) == 0; }
-
+if (!String.prototype.startsWith) {
+	String.prototype.startsWith = function(search, pos) {
+		return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+	};
+}
 
 /* For listening... */
 var http = require("http");
