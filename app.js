@@ -62,10 +62,19 @@ function discordBot()
        request({uri: yt_url},
          function(error, response, body){
            // Get the first instance of `{"videoId":"`
-           var start = body.search('<a aria-hidden="true" href="/watch?v="');
-           console.log(start);
-           console.log(body.substr(start, start+11));
-           console.log('youtube.com/watch?v=' + body.substr(start, 11));
+           //might save the body to a tmp file and test it like that.
+           var fs = require('fs');
+           fs.writeFile('tmp', body, function(err, data){ console.log('tmp written') });
+           fs.readFile('tmp', 'utf-8', function(err,buf)
+           {
+               var start = buf.search('<a aria-hidden="true" href="/watch?v="');
+               console.log(start);
+           }
+           
+//           var start = body.search('<a aria-hidden="true" href="/watch?v="');
+//           console.log(start);
+//           console.log(body.substr(start,));
+//           console.log('youtube.com/watch?v=' + body.substr(start, 11));
          });
             
             
