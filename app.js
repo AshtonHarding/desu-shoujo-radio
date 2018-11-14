@@ -62,9 +62,8 @@ function discordBot()
        request({uri: yt_url},
          function(error, response, body){
            // Get the first instance of `{"videoId":"`
-           var start = body.search("videoId");
-           console.log(start);
-           console.log('youtube.com/watch?v=' + body.substr(start+3, 11));
+           var start = body.search('class="yt-simple-endpoint inline-block style-scope ytd-thumbnail" aria-hidden="true" tabindex="-1" rel="null" href="');
+           console.log('youtube.com' + body.substr(start+3, 20);
          });
             
             
