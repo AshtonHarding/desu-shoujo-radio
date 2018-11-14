@@ -51,7 +51,7 @@ function discordBot()
         '```');
      }
      /* Youtube search */
-     if(lc_msg.substr(0, lc_msg.length) === config.prefix + "yt")
+     if(lc_msg.substr(0, lc_msg.length).slice(0,2) === config.prefix + "yt")
      {
        // Get query
        var yt_query = lc_msg.split('!yt')[1];
