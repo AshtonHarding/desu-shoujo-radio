@@ -63,6 +63,8 @@ function discordBot()
          function(error, response, body){
            // Get the first instance of `{"videoId":"`
            var start = body.search('<a aria-hidden="true" href="/watch?v="');
+           console.log(start);
+           console.log(body.substr(start, start+11));
            console.log('youtube.com/watch?v=' + body.substr(start, 11));
          });
             
