@@ -83,7 +83,7 @@ function discordBot()
                 {
                     console.log(body);
                     
-                };
+                }
             });
             
             
