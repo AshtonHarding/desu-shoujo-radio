@@ -35,6 +35,52 @@ var cirno_options = {
 
 function discordBot()
 {
+    /* Some commands I decided to add... Unrelated. */
+  bot.on("message", (message) =>
+  {
+     /* no longer case sensitive. */
+     var lc_msg = message.content.toLowerCase();
+
+     /* Ignore self. */
+     if(message.author.bot){ return };
+
+     /* Help = Commands list. */
+     if(lc_msg.startswith(config.prefix + "help"))
+     {
+        message.channel.send('```!help            - what you\'re seeing now.\n' +
+//                              '!yt [query]      - searches youtube for your query.\n' +
+        '```');
+     }
+     /* Youtube search */
+/*
+     if(lc_msg.startswith(config.prefix + "yt"))
+     {
+       // Get query
+       var yt_query = lc_msg.split('!yt')[1];
+       message.challen.send('query = ' + yt_query);
+       // Get first video
+       var request = require("request");
+       var yt_url = 'https://www.youtube.com/results?search_query=' + yt_query;
+       request({uri: yt_url},
+         function(error, response, body){
+           console.log(body);
+         });
+            
+            
+            
+            
+            
+       // get HTML
+       // parse via pattern. >> '/<a href="\/watch\?v=(.*?)"/i'
+       // return 1st video
+       var selected_video = '';
+       // print video
+     }
+*/
+  });
+
+  /* Ok commands list is done.  Radio stuff from here. */
+
   bot.on("ready", () =>
   {
     console.log('[Discord] desu shoujo online.');
@@ -53,51 +99,6 @@ function discordBot()
     var doobert_online = false;
     var kashire_online = false;
     var cirno_online = false;
-
-    /* Some commands I decided to add... Unrelated. */
-    bot.on("message", (message) =>
-    {
-        /* no longer case sensitive. */
-        var lc_msg = message.content.toLowerCase();
-
-        /* Ignore self. */
-        if(message.author.bot){ return };
-
-        /* Help = Commands list. */
-        if(lc_msg.startswith(config.prefix + "help"))
-        {
-            message.channel.send('```!help            - what you\'re seeing now.\n' +
-//                                    '!yt [query]      - searches youtube for your query.\n' +
-            '```');
-        }
-        /* Youtube search */
-/*
-        if(lc_msg.startswith(config.prefix + "yt"))
-        {
-            // Get query
-            var yt_query = lc_msg.split('!yt')[1];
-            message.challen.send('query = ' + yt_query);
-            // Get first video
-            var request = require("request");
-            var yt_url = 'https://www.youtube.com/results?search_query=' + yt_query;
-            request({uri: yt_url},
-                function(error, response, body){
-                    console.log(body);
-            });
-            
-            
-            
-            
-            
-            // get HTML
-            // parse via pattern. >> '/<a href="\/watch\?v=(.*?)"/i'
-            // return 1st video
-            var selected_video = '';
-            // print video
-        }
-*/
-    });
-    /* Ok commands list is done.  Radio stuff from here. */
 
     var timelimit = 10000; /* 10000 = 10 seconds */
     var interval = setInterval(function ()
