@@ -87,7 +87,6 @@ function discordBot()
             
             
             
-            });
             // get HTML
             // parse via pattern. >> '/<a href="\/watch\?v=(.*?)"/i'
             // return 1st video
