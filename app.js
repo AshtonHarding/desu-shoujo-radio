@@ -96,7 +96,7 @@ function discordBot()
             // print video
         }
 */
-    }
+    });
     /* Ok commands list is done.  Radio stuff from here. */
 
     var timelimit = 10000; /* 10000 = 10 seconds */
