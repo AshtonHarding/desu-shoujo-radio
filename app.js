@@ -51,7 +51,8 @@ function discordBot()
      if(message.author.bot){ return };
 
      /* Help = Commands list. */
-     if(lc_msg.startswith(config.prefix + "help"))
+//     if(lc_msg.startswith(config.prefix + "help"))
+     if(lc_msg.substr(0, lc_msg.length) === config.prefix + "help"))
      {
         message.channel.send('```!help            - what you\'re seeing now.\n' +
 //                              '!yt [query]      - searches youtube for your query.\n' +
