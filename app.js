@@ -64,6 +64,9 @@ function discordBot()
            // Get the first instance of `{"videoId":"`
            var start = body.search('class="yt-simple-endpoint inline-block style-scope ytd-thumbnail" aria-hidden="true" tabindex="-1" rel="null" href="');
            console.log('youtube.com' + body.substr(start+3, 20));
+           // debug. remove later...
+           var fs = require('fs');
+           fs.readFile('output.txt', function(err, buf){ console.log(buf.toString()) });
          });
             
             
