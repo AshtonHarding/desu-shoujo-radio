@@ -79,7 +79,7 @@ function discordBot()
             var request = require("request");
             var yt_url = 'https://www.youtube.com/results?search_query=' + yt_query;
             request({uri: yt_url},
-                function(error, response,body)
+                function({error, response,body)
                 {
                     console.log(body);
                     
