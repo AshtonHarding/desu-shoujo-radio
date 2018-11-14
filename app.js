@@ -63,9 +63,9 @@ function discordBot()
          function(error, response, body){
            // Get the first instance of `{"videoId":"`
            //might save the body to a tmp file and test it like that.
-           var start = body.search('/watch?v=');
+           var start = body.substring(body.indexOf('/watch?v=') + 1);
            console.log(start);
-           console.log(body.substr(start,));
+           console.log(body.substr(start, 15));
            console.log('youtube.com/watch?v=' + body.substr(start, 11));
          });
 
