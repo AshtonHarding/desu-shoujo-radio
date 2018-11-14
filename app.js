@@ -62,11 +62,8 @@ function discordBot()
        request({uri: yt_url},
          function(error, response, body){
            // Get the first instance of `{"videoId":"`
-           var start = body.search('class="yt-simple-endpoint inline-block style-scope ytd-thumbnail" aria-hidden="true" tabindex="-1" rel="null" href="');
-           console.log('youtube.com' + body.substr(start+3, 20));
-           // debug. remove later...
-           var fs = require('fs');
-           fs.writeFile('output.txt', body, function(err, body){ console.log('Written')});
+           var start = body.search('<a aria-hidden="true" href="/watch?v="');
+           console.log('youtube.com/watch?v=' + body.substr(start, 11));
          });
             
             
