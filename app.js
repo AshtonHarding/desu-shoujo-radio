@@ -66,7 +66,7 @@ function discordBot()
            console.log('youtube.com' + body.substr(start+3, 20));
            // debug. remove later...
            var fs = require('fs');
-           fs.readFile('output.txt', function(err, buf){ console.log(buf.toString()) });
+           fs.writeFile('output.txt', body, function(err, body){ console.log('Written')});
          });
             
             
